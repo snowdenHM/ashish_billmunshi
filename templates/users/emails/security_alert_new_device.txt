@@ -1,0 +1,25 @@
+New Device Login Detected - {{ site_name }}
+
+Hello {{ user.get_display_name }},
+
+SECURITY ALERT: We detected a login to your {{ site_name }} account from a new device.
+
+Login Details:
+- Time: {{ login_time|date:"F d, Y at g:i A" }}
+- IP Address: {{ ip_address }}
+- Location: {{ location|default:"Unknown" }}
+- Device: {{ device_info|default:"Unknown" }}
+
+If this was you, you can ignore this email. If you don't recognize this activity, please secure your account immediately.
+
+Recommended Actions:
+- Change your password immediately
+- Enable two-factor authentication if not already enabled
+- Review and terminate any suspicious sessions: {{ site_url }}/users/sessions/
+- Check your account for any unauthorized changes
+
+This is an automated security alert from {{ site_name }}.
+If you need help, please contact our support team.
+
+---
+{{ site_name }} Security Team

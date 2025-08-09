@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to {{ organization.name }}!</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background-color: #28a745; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; text-align: center; }
+        .content { padding: 20px 0; }
+        .button { display: inline-block; padding: 12px 24px; margin: 10px 0; text-decoration: none; border-radius: 5px; font-weight: bold; background-color: #007bff; color: white; }
+        .footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #666; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to {{ organization.name }}!</h1>
+        </div>
+
+        <div class="content">
+            <p>Hello {{ user.get_display_name }},</p>
+
+            <p>Welcome to {{ organization.name }}! You are now a member with <strong>{{ role.get_name_display }}</strong> access.</p>
+
+            {% if organization.description %}
+            <p>{{ organization.description }}</p>
+            {% endif %}
+
+            <p>Here's what you can do next:</p>
+            <ul>
+                <li>Access your organization dashboard</li>
+                <li>View and collaborate with team members</li>
+                <li>Start using our API services</li>
+                {% if role.can_manage_members %}
+                <li>Invite new team members</li>
+                {% endif %}
+                {% if role.can_manage_api_keys %}
+                <li>Generate and manage API keys</li>
+                {% endif %}
+            </ul>
+
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="{{ dashboard_url }}" class="button">Go to Dashboard</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Need help? Contact us or check our documentation.</p>
+            <p>Thanks for joining {{ organization.name }}!</p>
+        </div>
+    </div>
+</body>
+</html>

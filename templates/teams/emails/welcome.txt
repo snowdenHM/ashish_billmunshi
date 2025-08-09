@@ -1,0 +1,23 @@
+Welcome to {{ organization.name }}!
+
+Hello {{ user.get_display_name }},
+
+Welcome to {{ organization.name }}! You are now a member with {{ role.get_name_display }} access.
+
+{% if organization.description %}{{ organization.description }}{% endif %}
+
+Here's what you can do next:
+- Access your organization dashboard
+- View and collaborate with team members
+- Start using our API services
+{% if role.can_manage_members %}- Invite new team members{% endif %}
+{% if role.can_manage_api_keys %}- Generate and manage API keys{% endif %}
+
+Visit your dashboard: {{ dashboard_url }}
+
+Need help? Contact us or check our documentation.
+
+Thanks for joining {{ organization.name }}!
+
+---
+Billmunshi Team

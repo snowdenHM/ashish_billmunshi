@@ -1,0 +1,21 @@
+You're invited to join {{ organization.name }}!
+
+Hello,
+
+{{ invited_by.get_display_name }} has invited you to join {{ organization.name }} on Billmunshi.
+
+{% if organization.description %}{{ organization.description }}{% endif %}
+
+You have been invited as a {{ invitation.role.get_name_display }}.
+
+This invitation will expire on {{ expires_at|date:"F d, Y at g:i A" }}.
+
+To accept this invitation, visit: {{ accept_url }}
+To decline this invitation, visit: {{ decline_url }}
+
+This invitation was sent by {{ invited_by.get_display_name }} ({{ invited_by.email }}) from {{ organization.name }}.
+
+If you didn't expect this invitation, you can safely ignore this email.
+
+---
+Billmunshi Team

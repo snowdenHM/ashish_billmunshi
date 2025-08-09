@@ -69,13 +69,15 @@ THIRD_PARTY_APPS = [
     "health_check.db",
     "health_check.contrib.celery",
     "health_check.contrib.redis",
+    "corsheaders",  # Already included
+    "rest_framework_nested",  # Add this
 ]
 
 # Add your local apps here
 PROJECT_APPS = [
-    # "apps.users",
-    # "apps.teams",
-    # "apps.api",
+    "apps.users",
+    "apps.teams",
+    "apps.subscriptions",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS
@@ -94,6 +96,16 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "waffle.middleware.WaffleMiddleware",
+    # Add teams middleware
+    "apps.teams.middleware.OrganizationContextMiddleware",
+    "apps.teams.middleware.APIKeyAuthenticationMiddleware",
+    "apps.teams.middleware.APIKeyRateLimitMiddleware",
+    # Users middleware
+    "apps.users.middleware.UserActivityTrackingMiddleware",
+    "apps.users.middleware.SessionCleanupMiddleware",
+    "apps.users.middleware.UserPreferenceMiddleware",
+    "apps.users.middleware.APIUsageTrackingMiddleware",
+    "apps.users.middleware.SecurityHeadersMiddleware",
 ]
 
 # ======================================================================================
@@ -139,6 +151,8 @@ else:
             "PORT": env("DJANGO_DATABASE_PORT", default="5432"),
         }
     }
+
+AUTH_USER_MODEL = 'users.CustomUser'
 
 # ======================================================================================
 # AUTH / PASSWORDS
@@ -336,7 +350,7 @@ CELERY_BEAT_SCHEDULER = "django_celery_beat.schedulers:DatabaseScheduler"
 # WAFFLE (Feature Flags)
 # ======================================================================================
 
-WAFFLE_FLAG_MODEL = "teams.Flag"
+# WAFFLE_FLAG_MODEL = "teams.Flag"
 
 # ======================================================================================
 # PROJECT METADATA
