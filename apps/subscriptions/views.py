@@ -17,6 +17,8 @@ from drf_spectacular.utils import (
     OpenApiResponse
 )
 from drf_spectacular.types import OpenApiTypes
+from django.contrib.auth import get_user_model
+
 
 from apps.teams.permissions import IsOrganizationMember, IsOrganizationOwnerOrAdmin
 
@@ -53,6 +55,7 @@ from .serializers import (
 from .permissions import CanManageSubscription, CanViewSubscription
 from .utils import SubscriptionManager, UsageTracker, BillingCalculator
 
+User = get_user_model()
 
 @extend_schema_view(
     list=extend_schema(

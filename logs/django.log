@@ -1,0 +1,306 @@
+INFO 2025-08-09 14:40:00,558 autoreload 24868 133842888577664 Watching for file changes with StatReloader
+INFO 2025-08-09 14:40:02,970 basehttp 24868 133842714228288 "GET / HTTP/1.1" 301 0
+INFO 2025-08-09 14:40:02,978 basehttp 24868 133842714228288 code 400, message Bad request version ('\x81\x12VX\\A\x84\x94\xadÁ2z:L\x8d!§Ü\x81[,ò²\x06Ì©\x91\x92C°\x991Õ')
+ERROR 2025-08-09 14:40:02,978 basehttp 24868 133842714228288 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-08-09 14:40:02,979 basehttp 24868 133842714228288 code 400, message Bad request version ('Yi\\À\x9cër°Ã²q°ùâèBÙbaYY\x9e$4ü$\x07E\x00')
+ERROR 2025-08-09 14:40:02,979 basehttp 24868 133842714228288 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-08-09 14:40:10,229 basehttp 24868 133842714228288 code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00')
+ERROR 2025-08-09 14:40:10,230 basehttp 24868 133842714228288 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-08-09 14:40:10,230 basehttp 24868 133842697442880 code 400, message Bad request version ('ìÙQJq\x9eJô«C{')
+ERROR 2025-08-09 14:40:10,230 basehttp 24868 133842697442880 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-08-09 14:40:10,231 basehttp 24868 133842689050176 code 400, message Bad request version ('\x02h2\x08http/1.1\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00')
+ERROR 2025-08-09 14:40:10,231 basehttp 24868 133842689050176 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-08-09 14:40:10,232 basehttp 24868 133842714228288 code 400, message Bad request version ('t')
+ERROR 2025-08-09 14:40:10,232 basehttp 24868 133842714228288 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-08-09 14:41:12,309 autoreload 25108 127909245231744 Watching for file changes with StatReloader
+INFO 2025-08-09 14:41:14,426 basehttp 25108 127909138265664 code 400, message Bad request version ('Å\x80ñC-ÂÄ`\x8c3\\Dc@\x7f)´½X\x99\x00')
+ERROR 2025-08-09 14:41:14,426 basehttp 25108 127909138265664 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-08-09 14:41:14,426 basehttp 25108 127909129872960 code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00')
+ERROR 2025-08-09 14:41:14,427 basehttp 25108 127909129872960 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-08-09 14:41:14,427 basehttp 25108 127909121480256 code 400, message Bad request version ('\x98hòc»d\x93a\x1b1\x9fôgÒ\x9ac¨ÌJM\x14}\x8eI\x89¢Ç')
+INFO 2025-08-09 14:41:14,427 basehttp 25108 127909129872960 code 400, message Bad request version ('\x0fiÄ7\x17\x07')
+ERROR 2025-08-09 14:41:14,427 basehttp 25108 127909121480256 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-08-09 14:41:14,427 basehttp 25108 127909129872960 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-08-09 14:41:23,074 basehttp 25108 127909121480256 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-08-09 14:41:23,106 basehttp 25108 127909121480256 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4193
+INFO 2025-08-09 14:41:23,180 basehttp 25108 127909121480256 "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+INFO 2025-08-09 14:41:23,183 basehttp 25108 127909110990400 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+INFO 2025-08-09 14:41:23,183 basehttp 25108 127908756584000 "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2025-08-09 14:41:23,183 basehttp 25108 127909138265664 "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+INFO 2025-08-09 14:41:23,183 basehttp 25108 127909102597696 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-08-09 14:41:23,183 basehttp 25108 127909129872960 "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2025-08-09 14:41:23,188 basehttp 25108 127908748191296 "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2025-08-09 14:41:23,197 basehttp 25108 127908756584000 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-08-09 14:41:23,248 basehttp 25108 127908748191296 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+ERROR 2025-08-09 14:41:23,326 log 25108 127908756584000 Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 1415, in get_connection
+    connection = self._available_connections.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/heramb/private/project/billmunshi/apps/api/middleware.py", line 43, in process_request
+    return self.check_anonymous_rate_limit(request)
+  File "/home/heramb/private/project/billmunshi/apps/api/middleware.py", line 160, in check_anonymous_rate_limit
+    hourly_count = cache.get(hourly_key, 0)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/core/cache/backends/redis.py", line 188, in get
+    return self._cache.get(key, default)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/core/cache/backends/redis.py", line 100, in get
+    value = client.get(key)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/commands/core.py", line 1822, in get
+    return self.execute_command("GET", name, keys=[name])
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 1417, in get_connection
+    connection = self.make_connection()
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 1463, in make_connection
+    return self.connection_class(**self.connection_kwargs)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 684, in __init__
+    super().__init__(**kwargs)
+TypeError: AbstractConnection.__init__() got an unexpected keyword argument 'CLIENT_CLASS'
+ERROR 2025-08-09 14:41:23,327 basehttp 25108 127908756584000 "GET /favicon.ico HTTP/1.1" 500 129652
+INFO 2025-08-09 14:41:46,662 basehttp 25108 127908756584000 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4193
+ERROR 2025-08-09 14:41:46,730 log 25108 127908756584000 Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 1415, in get_connection
+    connection = self._available_connections.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/heramb/private/project/billmunshi/apps/api/middleware.py", line 43, in process_request
+    return self.check_anonymous_rate_limit(request)
+  File "/home/heramb/private/project/billmunshi/apps/api/middleware.py", line 160, in check_anonymous_rate_limit
+    hourly_count = cache.get(hourly_key, 0)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/core/cache/backends/redis.py", line 188, in get
+    return self._cache.get(key, default)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/core/cache/backends/redis.py", line 100, in get
+    value = client.get(key)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/commands/core.py", line 1822, in get
+    return self.execute_command("GET", name, keys=[name])
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 1417, in get_connection
+    connection = self.make_connection()
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 1463, in make_connection
+    return self.connection_class(**self.connection_kwargs)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 684, in __init__
+    super().__init__(**kwargs)
+TypeError: AbstractConnection.__init__() got an unexpected keyword argument 'CLIENT_CLASS'
+ERROR 2025-08-09 14:41:46,730 basehttp 25108 127908756584000 "GET /favicon.ico HTTP/1.1" 500 129652
+INFO 2025-08-09 14:42:04,308 autoreload 25532 139507567882880 Watching for file changes with StatReloader
+INFO 2025-08-09 14:42:08,389 basehttp 25532 139507374483008 code 400, message Bad request version ('\x02h2\x08http/1.1\x00-\x00\x02\x01\x01\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00+\x00\x07\x06**\x03\x04\x03\x03\x00#\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00\x12\x00\x00\x00')
+ERROR 2025-08-09 14:42:08,389 basehttp 25532 139507374483008 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-08-09 14:42:08,390 basehttp 25532 139507374483008 code 400, message Bad request version ('\x02h2\x08http/1.1\x00\x1b\x00\x03\x02\x00\x02\x00+\x00\x07\x06')
+ERROR 2025-08-09 14:42:08,390 basehttp 25532 139507374483008 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-08-09 14:42:13,719 basehttp 25532 139507374483008 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03Óê:â\x87µVCI0$')
+ERROR 2025-08-09 14:42:13,719 basehttp 25532 139507374483008 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-08-09 14:42:13,720 basehttp 25532 139507374483008 code 400, message Bad request version ('ÝqGÓýsÑU\x9e~RÅi§Df_')
+ERROR 2025-08-09 14:42:13,720 basehttp 25532 139507374483008 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-08-09 14:42:25,259 basehttp 25532 139507462567488 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-08-09 14:42:25,311 basehttp 25532 139507462567488 "GET /admin/ HTTP/1.1" 200 29194
+INFO 2025-08-09 14:42:25,375 basehttp 25532 139507462567488 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2025-08-09 14:42:25,430 basehttp 25532 139507382875712 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-08-09 14:42:25,432 basehttp 25532 139507462567488 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-08-09 14:42:25,432 basehttp 25532 139507374483008 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+ERROR 2025-08-09 14:42:25,556 log 25532 139507462567488 Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 1415, in get_connection
+    connection = self._available_connections.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/heramb/private/project/billmunshi/apps/api/middleware.py", line 41, in process_request
+    return self.check_user_rate_limit(request)
+  File "/home/heramb/private/project/billmunshi/apps/api/middleware.py", line 113, in check_user_rate_limit
+    hourly_count = cache.get(hourly_key, 0)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/core/cache/backends/redis.py", line 188, in get
+    return self._cache.get(key, default)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/core/cache/backends/redis.py", line 100, in get
+    value = client.get(key)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/commands/core.py", line 1822, in get
+    return self.execute_command("GET", name, keys=[name])
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 1417, in get_connection
+    connection = self.make_connection()
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 1463, in make_connection
+    return self.connection_class(**self.connection_kwargs)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 684, in __init__
+    super().__init__(**kwargs)
+TypeError: AbstractConnection.__init__() got an unexpected keyword argument 'CLIENT_CLASS'
+ERROR 2025-08-09 14:42:25,557 basehttp 25532 139507462567488 "GET /favicon.ico HTTP/1.1" 500 129540
+ERROR 2025-08-09 14:43:05,138 log 25532 139507462567488 Internal Server Error: /swagger
+Traceback (most recent call last):
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 1415, in get_connection
+    connection = self._available_connections.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/heramb/private/project/billmunshi/apps/api/middleware.py", line 41, in process_request
+    return self.check_user_rate_limit(request)
+  File "/home/heramb/private/project/billmunshi/apps/api/middleware.py", line 113, in check_user_rate_limit
+    hourly_count = cache.get(hourly_key, 0)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/core/cache/backends/redis.py", line 188, in get
+    return self._cache.get(key, default)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/core/cache/backends/redis.py", line 100, in get
+    value = client.get(key)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/commands/core.py", line 1822, in get
+    return self.execute_command("GET", name, keys=[name])
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 1417, in get_connection
+    connection = self.make_connection()
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 1463, in make_connection
+    return self.connection_class(**self.connection_kwargs)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 684, in __init__
+    super().__init__(**kwargs)
+TypeError: AbstractConnection.__init__() got an unexpected keyword argument 'CLIENT_CLASS'
+ERROR 2025-08-09 14:43:05,138 basehttp 25532 139507462567488 "GET /swagger HTTP/1.1" 500 129686
+ERROR 2025-08-09 14:43:05,267 log 25532 139507462567488 Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 1415, in get_connection
+    connection = self._available_connections.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/heramb/private/project/billmunshi/apps/api/middleware.py", line 41, in process_request
+    return self.check_user_rate_limit(request)
+  File "/home/heramb/private/project/billmunshi/apps/api/middleware.py", line 113, in check_user_rate_limit
+    hourly_count = cache.get(hourly_key, 0)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/core/cache/backends/redis.py", line 188, in get
+    return self._cache.get(key, default)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/core/cache/backends/redis.py", line 100, in get
+    value = client.get(key)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/commands/core.py", line 1822, in get
+    return self.execute_command("GET", name, keys=[name])
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 1417, in get_connection
+    connection = self.make_connection()
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 1463, in make_connection
+    return self.connection_class(**self.connection_kwargs)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 684, in __init__
+    super().__init__(**kwargs)
+TypeError: AbstractConnection.__init__() got an unexpected keyword argument 'CLIENT_CLASS'
+ERROR 2025-08-09 14:43:05,267 basehttp 25532 139507462567488 "GET /favicon.ico HTTP/1.1" 500 129541
+ERROR 2025-08-09 14:43:15,509 log 25532 139507462567488 Internal Server Error: /docs
+Traceback (most recent call last):
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 1415, in get_connection
+    connection = self._available_connections.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/heramb/private/project/billmunshi/apps/api/middleware.py", line 41, in process_request
+    return self.check_user_rate_limit(request)
+  File "/home/heramb/private/project/billmunshi/apps/api/middleware.py", line 113, in check_user_rate_limit
+    hourly_count = cache.get(hourly_key, 0)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/core/cache/backends/redis.py", line 188, in get
+    return self._cache.get(key, default)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/core/cache/backends/redis.py", line 100, in get
+    value = client.get(key)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/commands/core.py", line 1822, in get
+    return self.execute_command("GET", name, keys=[name])
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 1417, in get_connection
+    connection = self.make_connection()
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 1463, in make_connection
+    return self.connection_class(**self.connection_kwargs)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 684, in __init__
+    super().__init__(**kwargs)
+TypeError: AbstractConnection.__init__() got an unexpected keyword argument 'CLIENT_CLASS'
+ERROR 2025-08-09 14:43:15,509 basehttp 25532 139507462567488 "GET /docs HTTP/1.1" 500 129653
+ERROR 2025-08-09 14:43:15,589 log 25532 139507462567488 Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 1415, in get_connection
+    connection = self._available_connections.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/heramb/private/project/billmunshi/apps/api/middleware.py", line 41, in process_request
+    return self.check_user_rate_limit(request)
+  File "/home/heramb/private/project/billmunshi/apps/api/middleware.py", line 113, in check_user_rate_limit
+    hourly_count = cache.get(hourly_key, 0)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/core/cache/backends/redis.py", line 188, in get
+    return self._cache.get(key, default)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/django/core/cache/backends/redis.py", line 100, in get
+    value = client.get(key)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/commands/core.py", line 1822, in get
+    return self.execute_command("GET", name, keys=[name])
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 1417, in get_connection
+    connection = self.make_connection()
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 1463, in make_connection
+    return self.connection_class(**self.connection_kwargs)
+  File "/home/heramb/private/project/billmunshi/.venv/lib/python3.10/site-packages/redis/connection.py", line 684, in __init__
+    super().__init__(**kwargs)
+TypeError: AbstractConnection.__init__() got an unexpected keyword argument 'CLIENT_CLASS'
+ERROR 2025-08-09 14:43:15,589 basehttp 25532 139507462567488 "GET /favicon.ico HTTP/1.1" 500 129538
+INFO 2025-08-09 14:43:48,583 autoreload 25532 139507567882880 /home/heramb/private/project/billmunshi/billmunshi/settings.py changed, reloading.
+INFO 2025-08-09 14:43:48,827 autoreload 25787 136700000510592 Watching for file changes with StatReloader
+INFO 2025-08-09 14:44:24,345 autoreload 26019 125834769695360 Watching for file changes with StatReloader
+WARNING 2025-08-09 14:44:28,814 log 26019 125834659624512 Not Found: /docs
+WARNING 2025-08-09 14:44:28,814 basehttp 26019 125834659624512 "GET /docs HTTP/1.1" 404 2677
+WARNING 2025-08-09 14:44:28,876 log 26019 125834659624512 Not Found: /favicon.ico
+WARNING 2025-08-09 14:44:28,876 basehttp 26019 125834659624512 "GET /favicon.ico HTTP/1.1" 404 2698
+WARNING 2025-08-09 14:44:34,654 log 26019 125834659624512 Not Found: /docs/
+WARNING 2025-08-09 14:44:34,654 basehttp 26019 125834659624512 "GET /docs/ HTTP/1.1" 404 2680
+INFO 2025-08-09 14:44:42,328 basehttp 26019 125834659624512 "GET /api/docs/ HTTP/1.1" 200 4647
+INFO 2025-08-09 14:44:42,701 basehttp 26019 125834659624512 "GET /api/schema/ HTTP/1.1" 200 282334

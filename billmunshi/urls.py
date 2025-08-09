@@ -8,22 +8,24 @@ from drf_spectacular.views import (
     SpectacularSwaggerView,
 )
 
-urlpatterns = [
-    # Admin
-    path('admin/', admin.site.urls),
-    
+api_patterns = [
     # API Documentation
-    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
-    path('api/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
-    path('api/schema/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
-    
-    # API Routes
-    path('api/teams/', include('apps.teams.urls')),
-    path('api/users/', include('apps.users.urls')),  # Will add later
-    path('api/subscriptions/', include('apps.subscriptions.urls')),  # Will add later
-    
-    # Health Check (if you want to keep it accessible)
-    path('health/', include('health_check.urls')),
+    path('schema/', SpectacularAPIView.as_view(), name='schema'),
+    path('docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
+    path('redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
+
+    # Authentication (AllAuth Headless)
+    path('auth/', include('allauth.headless.urls')),
+
+    # App APIs
+    path('users/', include('apps.users.urls')),
+    path('teams/', include('apps.teams.urls')),
+    path('subscriptions/', include('apps.subscriptions.urls')),
+]
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('api/', include(api_patterns)),
 ]
 
 # Serve media files in development

@@ -1,0 +1,100 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block title %}Dashboard - {{ site_title|default:"Django Admin" }}{% endblock %}
+
+{% block extrahead %}
+<style>
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+.stat-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.stat-number {
+    font-size: 2em;
+    font-weight: bold;
+    color: #2196F3;
+    margin-bottom: 5px;
+}
+.stat-label {
+    color: #666;
+    font-size: 0.9em;
+}
+.recent-items {
+    margin: 30px 0;
+}
+.recent-list {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.recent-item {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+.recent-item:last-child {
+    border-bottom: none;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<h1>Dashboard</h1>
+
+<div class="dashboard-stats">
+    <div class="stat-card">
+        <div class="stat-number">{{ total_users }}</div>
+        <div class="stat-label">Total Users</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">{{ total_organizations }}</div>
+        <div class="stat-label">Organizations</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">{{ active_subscriptions }}</div>
+        <div class="stat-label">Active Subscriptions</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">${{ total_revenue|floatformat:0 }}</div>
+        <div class="stat-label">Total Revenue</div>
+    </div>
+</div>
+
+<div class="recent-items">
+    <h2>Recent Signups</h2>
+    <div class="recent-list">
+        {% for user in recent_signups %}
+        <div class="recent-item">
+            <strong>{{ user.get_display_name }}</strong> - {{ user.email }}
+            <small style="float: right;">{{ user.date_joined|date:"M d, Y" }}</small>
+        </div>
+        {% empty %}
+        <div class="recent-item">No recent signups</div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="recent-items">
+    <h2>Recent Subscriptions</h2>
+    <div class="recent-list">
+        {% for subscription in recent_subscriptions %}
+        <div class="recent-item">
+            <strong>{{ subscription.organization.name }}</strong> - {{ subscription.plan.name }}
+            <small style="float: right;">{{ subscription.created_at|date:"M d, Y" }}</small>
+        </div>
+        {% empty %}
+        <div class="recent-item">No recent subscriptions</div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
