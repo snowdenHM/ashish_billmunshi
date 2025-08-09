@@ -1,0 +1,16 @@
+Verify Your Email - {{ site_name }}
+
+Hello {{ user.first_name|default:user.email }},
+
+Thank you for registering with {{ site_name }}. To complete your registration, please verify your email address by visiting:
+
+{{ verify_url }}
+
+If you didn't create an account with {{ site_name }}, please ignore this email.
+
+Welcome aboard!
+
+Best regards,
+{{ site_name }} Team
+
+© {{ site_name }}. All rights reserved.
