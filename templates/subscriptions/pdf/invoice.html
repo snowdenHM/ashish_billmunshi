@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Invoice {{ invoice.invoice_number }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+            line-height: 1.6;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 20px;
+        }
+        .company-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 5px;
+        }
+        .invoice-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #333;
+        }
+        .invoice-details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        .invoice-info, .bill-to {
+            width: 45%;
+        }
+        .invoice-info h3, .bill-to h3 {
+            margin-bottom: 10px;
+            color: #007bff;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        .invoice-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+        .invoice-table th,
+        .invoice-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .invoice-table th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+            color: #333;
+        }
+        .invoice-table .amount {
+            text-align: right;
+        }
+        .total-row {
+            font-weight: bold;
+            background-color: #f8f9fa;
+        }
+        .payment-info {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        .status {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .status.paid {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .status.unpaid {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .status.overdue {
+            background-color: #fce4ec;
+            color: #e91e63;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="company-name">{{ site_name }}</div>
+        <div class="invoice-title">INVOICE</div>
+    </div>
+
+    <div class="invoice-details">
+        <div class="invoice-info">
+            <h3>Invoice Details</h3>
+            <p><strong>Invoice #:</strong> {{ invoice.invoice_number }}</p>
+            <p><strong>Invoice Date:</strong> {{ invoice.issue_date|date:"F d, Y" }}</p>
+            <p><strong>Due Date:</strong> {{ invoice.due_date|date:"F d, Y" }}</p>
+            <p><strong>Status:</strong>
+                <span class="status {% if invoice.status == 'paid' %}paid{% elif invoice.is_overdue %}overdue{% else %}unpaid{% endif %}">
+                    {{ invoice.get_status_display }}
+                </span>
+            </p>
+        </div>
+
+        <div class="bill-to">
+            <h3>Bill To</h3>
+            <p><strong>{{ organization.name }}</strong></p>
+            {% if organization.address %}
+            <p>{{ organization.address|linebreaks }}</p>
+            {% endif %}
+            <p>{{ owner.email }}</p>
+            {% if organization.phone %}
+            <p>{{ organization.phone }}</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <table class="invoice-table">
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>Service Period</th>
+                <th>Plan</th>
+                <th class="amount">Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ plan.name }} Subscription</td>
+                <td>{{ invoice.period_start|date:"M d, Y" }} - {{ invoice.period_end|date:"M d, Y" }}</td>
+                <td>{{ plan.name }}</td>
+                <td class="amount">${{ invoice.subtotal }}</td>
+            </tr>
+            {% if invoice.tax_amount > 0 %}
+            <tr>
+                <td>Tax ({{ invoice.tax_rate|floatformat:2 }}%)</td>
+                <td>-</td>
+                <td>-</td>
+                <td class="amount">${{ invoice.tax_amount }}</td>
+            </tr>
+            {% endif %}
+        </tbody>
+        <tfoot>
+            <tr class="total-row">
+                <td colspan="3"><strong>Total Amount</strong></td>
+                <td class="amount"><strong>${{ invoice.total_amount }}</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    {% if subscription.plan.get_feature_list %}
+    <div style="margin: 30px 0;">
+        <h3>Plan Features</h3>
+        <ul>
+            {% for feature in subscription.plan.get_feature_list %}
+            <li>{{ feature }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    {% if invoice.notes %}
+    <div style="margin: 30px 0;">
+        <h3>Notes</h3>
+        <p>{{ invoice.notes|linebreaks }}</p>
+    </div>
+    {% endif %}
+
+    <div class="payment-info">
+        <h3>Payment Information</h3>
+        <p>Thank you for your business! If you have any questions about this invoice, please contact our support team.</p>
+        {% if invoice.status != 'paid' %}
+        <p><strong>Payment is due by {{ invoice.due_date|date:"F d, Y" }}</strong></p>
+        {% else %}
+        <p><strong>Payment received on {{ invoice.paid_date|date:"F d, Y" }}</strong> - Thank you!</p>
+        {% endif %}
+    </div>
+
+    <div class="footer">
+        <p>Generated on {{ generated_at|date:"F d, Y \a\t g:i A" }}</p>
+        <p>{{ site_name }} - Automated Billing System</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usage Alert - {{ organization.name }}</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background-color: #ff6b35; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; text-align: center; }
+        .content { padding: 20px 0; }
+        .alert-box { background-color: #fff3cd; border: 1px solid #ffeaa7; padding: 15px; border-radius: 5px; margin: 20px 0; }
+        .usage-details { background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin: 15px 0; }
+        .button { display: inline-block; padding: 12px 24px; margin: 10px 0; text-decoration: none; border-radius: 5px; font-weight: bold; background-color: #007bff; color: white; }
+        .footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #666; }
+        .progress-bar { background-color: #e9ecef; border-radius: 4px; overflow: hidden; margin: 10px 0; }
+        .progress-fill { background-color: {% if percentage >= 95 %}#dc3545{% elif percentage >= 80 %}#ffc107{% else %}#28a745{% endif %}; height: 20px; width: {{ percentage }}%; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Usage Alert</h1>
+        </div>
+
+        <div class="content">
+            <p>Hello {{ owner.get_display_name }},</p>
+
+            <div class="alert-box">
+                <strong>Usage Alert:</strong> Your {{ usage_type|title }} usage for {{ organization.name }} has reached {{ percentage|floatformat:1 }}% of your plan limit.
+            </div>
+
+            <div class="usage-details">
+                <h3>Usage Details:</h3>
+                <p><strong>{{ usage_type|title }}:</strong> {{ current_usage|floatformat:0 }} of {{ limit|floatformat:0 }}</p>
+
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+
+                <p><strong>Plan:</strong> {{ plan.name }}</p>
+                <p><strong>Current Period:</strong> {{ subscription.current_period_start|date:"M d" }} - {{ subscription.current_period_end|date:"M d, Y" }}</p>
+            </div>
+
+            {% if percentage >= 95 %}
+            <p><strong>Action Required:</strong> You're very close to reaching your plan limit. To avoid service interruption, consider upgrading your plan or reducing usage.</p>
+            {% else %}
+            <p><strong>Heads Up:</strong> You're approaching your plan limit. Monitor your usage or consider upgrading if you expect continued high usage.</p>
+            {% endif %}
+
+            <h3>What You Can Do:</h3>
+            <ul>
+                <li>Monitor your current usage in the dashboard</li>
+                <li>Upgrade to a higher plan for more {{ usage_type|title|lower }}</li>
+                <li>Optimize your API usage patterns</li>
+                <li>Contact support if you have questions</li>
+            </ul>
+
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="{{ site_url }}/organizations/{{ organization.id }}/billing" class="button">View Usage Dashboard</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>This is an automated usage alert from {{ site_name }}.</p>
+            <p>You can adjust your notification preferences in your account settings.</p>
+        </div>
+    </div>
+</body>
+</html>

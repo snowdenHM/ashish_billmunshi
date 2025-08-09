@@ -1,0 +1,26 @@
+Usage Alert - {{ organization.name }}
+
+Hello {{ owner.get_display_name }},
+
+USAGE ALERT: Your {{ usage_type|title }} usage for {{ organization.name }} has reached {{ percentage|floatformat:1 }}% of your plan limit.
+
+Usage Details:
+- {{ usage_type|title }}: {{ current_usage|floatformat:0 }} of {{ limit|floatformat:0 }}
+- Plan: {{ plan.name }}
+- Current Period: {{ subscription.current_period_start|date:"M d" }} - {{ subscription.current_period_end|date:"M d, Y" }}
+
+{% if percentage >= 95 %}ACTION REQUIRED: You're very close to reaching your plan limit. To avoid service interruption, consider upgrading your plan or reducing usage.{% else %}HEADS UP: You're approaching your plan limit. Monitor your usage or consider upgrading if you expect continued high usage.{% endif %}
+
+What You Can Do:
+- Monitor your current usage in the dashboard
+- Upgrade to a higher plan for more {{ usage_type|title|lower }}
+- Optimize your API usage patterns
+- Contact support if you have questions
+
+View Usage Dashboard: {{ site_url }}/organizations/{{ organization.id }}/billing
+
+This is an automated usage alert from {{ site_name }}.
+You can adjust your notification preferences in your account settings.
+
+---
+{{ site_name }} Team

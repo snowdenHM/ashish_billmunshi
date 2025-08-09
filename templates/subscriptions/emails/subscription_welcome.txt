@@ -1,0 +1,32 @@
+Welcome to {{ plan.name }}!
+
+Hello {{ owner.get_display_name }},
+
+Congratulations! Your organization {{ organization.name }} has been successfully subscribed to the {{ plan.name }} plan.
+
+Your Plan Details:
+- Plan: {{ plan.name }}
+- Price: {{ plan.currency }} {{ subscription.effective_price }} / {{ plan.get_billing_interval_display }}
+{% if subscription.is_trial %}- Trial Period: Until {{ subscription.trial_end_date|date:"F d, Y" }}{% endif %}
+- API Calls: Up to {{ plan.max_api_calls_per_month|floatformat:0 }} per month
+- Users: Up to {{ plan.max_users }}
+- Storage: {{ plan.max_storage_gb }} GB
+
+What's included in your plan:
+{% for feature in plan.get_feature_list %}- {{ feature }}
+{% endfor %}
+
+Next Steps:
+1. Generate your first API key
+2. Invite team members to collaborate
+3. Start integrating with our API
+4. Monitor your usage in the dashboard
+
+Go to Dashboard: {{ dashboard_url }}
+
+Need help getting started? Check out our documentation or contact our support team.
+
+Thank you for choosing {{ site_name }}!
+
+---
+{{ site_name }} Team
